@@ -1,7 +1,6 @@
 package Vista;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.text.SimpleDateFormat;
 
@@ -30,7 +29,7 @@ public class Vista extends JFrame {
     }
 
     public Vista() {
-        setTitle("Gimnasioa - Saioa Hasi");
+    	setTitle("Gimnasioa");
         setBounds(100, 100, 500, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -84,6 +83,7 @@ public class Vista extends JFrame {
     }
 
     private void crearPanelEregistro() {
+
         panelEregistro = new JPanel();
         panelEregistro.setBounds(0, 0, 500, 350);
         panelEregistro.setLayout(null);
