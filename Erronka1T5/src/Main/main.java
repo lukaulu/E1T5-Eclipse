@@ -5,7 +5,7 @@ import Vista.loginV;
 public class main {
 	
 	public static void main(String[] args) {
-		//inizializar la login vista
+		// Iniciar el programa
 		loginV login = new loginV();
 		login.setVisible(true);
 	}

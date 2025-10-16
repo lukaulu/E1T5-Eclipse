@@ -17,8 +17,8 @@ public class loginV extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField tFIzena;
+	private JTextField tFPasahitza;
 
 	/**
 	 * Create the frame.
@@ -39,7 +39,8 @@ public class loginV extends JFrame {
 				loginV loginV = new loginV();
 				workouts.setVisible(true);
 				loginV.setVisible(false);
-			}
+				dispose();
+				}
 		});
 		btnSaioaHasi.setBounds(168, 179, 127, 23);
 		contentPane.add(btnSaioaHasi);
@@ -61,7 +62,7 @@ public class loginV extends JFrame {
 		JLabel lblSaioaHasi = new JLabel("Saioa Hasi");
 		lblSaioaHasi.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblSaioaHasi.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSaioaHasi.setBounds(153, 11, 104, 23);
+		lblSaioaHasi.setBounds(168, 11, 104, 23);
 		contentPane.add(lblSaioaHasi);
 		
 		JLabel lblIzena = new JLabel("Izena");
@@ -76,15 +77,20 @@ public class loginV extends JFrame {
 		lblPasahitza.setBounds(50, 120, 89, 14);
 		contentPane.add(lblPasahitza);
 		
-		textField = new JTextField();
-		textField.setBounds(168, 78, 127, 17);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		tFIzena = new JTextField();
+		tFIzena.setBounds(168, 78, 127, 17);
+		contentPane.add(tFIzena);
+		tFIzena.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setBounds(168, 120, 127, 17);
-		contentPane.add(textField_1);
-		textField_1.setColumns(10);
+		tFPasahitza = new JTextField();
+		tFPasahitza.setBounds(168, 120, 127, 17);
+		contentPane.add(tFPasahitza);
+		tFPasahitza.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel("Logo");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setBounds(10, 5, 58, 36);
+		contentPane.add(lblNewLabel);
 
 	}
 }

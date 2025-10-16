@@ -3,12 +3,10 @@ package Vista;
 
 import java.awt.Font;
 import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
@@ -123,6 +121,12 @@ public class erregistroV extends JFrame {
 		tFjaiotzeData.setBounds(171, 167, 86, 20);
 		getContentPane().add(tFjaiotzeData);
 		tFjaiotzeData.setColumns(10);
+		
+		JLabel lblLogo = new JLabel("LOGO");
+		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLogo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblLogo.setBounds(10, 7, 65, 33);
+		contentPane.add(lblLogo);
 
 
 	}

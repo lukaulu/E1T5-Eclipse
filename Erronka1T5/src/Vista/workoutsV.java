@@ -8,6 +8,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class workoutsV extends JFrame {
 
@@ -46,7 +49,17 @@ public class workoutsV extends JFrame {
 		lblWorkouts.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblWorkouts.setBounds(149, 11, 114, 22);
 		contentPane.add(lblWorkouts);
+		
+		JButton btnAtzera = new JButton("Atzera");
+		btnAtzera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				loginV login = new loginV();
+				login.setVisible(true);
+				dispose();
+			}
+		});
+		btnAtzera.setBounds(10, 14, 89, 23);
+		contentPane.add(btnAtzera);
 
 	}
-
 }
