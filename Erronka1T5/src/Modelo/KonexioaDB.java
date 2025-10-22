@@ -12,7 +12,7 @@ public class KonexioaDB {
 		Firestore db = null;
 		
 		try {
-			FileInputStream serviceAcc = new FileInputStream("JSON DE LA BASE DE DATOS");
+			FileInputStream serviceAcc = new FileInputStream("DBGYMAPP.json");
 			FirestoreOptions firestoreOptions = FirestoreOptions.getDefaultInstance().toBuilder()
 					.setProjectId("dberronka3t").setCredentials(GoogleCredentials.fromStream(serviceAcc)).build();
 			db = firestoreOptions.getService();

@@ -1,30 +1,29 @@
 package Modelo;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Workout implements Serializable {
 
 	private String id;
-	private String izena;
-	private String maila;
-	private int ariketaKop;
+	private String name;
+	private String level;
+	private int exerciseCount;
 	private String url;
 
-	public Workout(String id, String nombre, String nivel, int numDeEjer, String url) {
+	public Workout(String id, String name, String level, int exerciseCount, String url) {
 		this.id = id;
-		this.izena = nombre;
-		this.maila = nivel;
-		this.ariketaKop = numDeEjer;
+		this.name = name;
+		this.level = level;
+		this.exerciseCount = exerciseCount;
 		this.url = url;
 	}
 
 	public Workout() {
 		this.id = "";
-		this.izena = "";
-		this.maila = "";
-		this.ariketaKop = 0;
+		this.name = "";
+		this.level = "";
+		this.exerciseCount = 0;
 		this.url = "";
 	}
 
@@ -36,28 +35,28 @@ public class Workout implements Serializable {
 		this.id = id; 
 	}
 
-	public String getNombre() {
-		return izena;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.izena = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getNivel() {
-		return maila;
+	public String getLevel() {
+		return level;
 	}
 
-	public void setNivel(String nivel) {
-		this.maila = nivel;
+	public void setLevel(String level) {
+		this.level = level;
 	}
 
-	public int getNumDeEjer() {
-		return ariketaKop;
+	public int getExerciseCount() {
+		return exerciseCount;
 	}
 
-	public void setNumDeEjer(int numDeEjer) {
-		this.ariketaKop = numDeEjer;
+	public void setExerciseCount(int exerciseCount) {
+		this.exerciseCount = exerciseCount;
 	}
 
 	public String getUrl() {
@@ -70,7 +69,7 @@ public class Workout implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Workout: " + izena + " | Maila: " + maila + " | Ariketa kopurua: " + ariketaKop + " | URL: " + url;
+		return "Workout: " + name + " | Level: " + level + " | Exercise count: " + exerciseCount + " | URL: " + url;
 	}
 
 	@Override
@@ -82,7 +81,10 @@ public class Workout implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Workout other = (Workout) obj;
-		return id == other.id && Objects.equals(maila, other.maila) && Objects.equals(izena, other.izena)
-				&& ariketaKop == other.ariketaKop && Objects.equals(url, other.url);
+		return Objects.equals(id, other.id)
+				&& Objects.equals(level, other.level)
+				&& Objects.equals(name, other.name)
+				&& exerciseCount == other.exerciseCount
+				&& Objects.equals(url, other.url);
 	}
 }
